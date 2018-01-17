@@ -3,8 +3,18 @@ package com.techlabs.overloading;
 public class TestAdd {
 
 	public static void main(String[] args) {
-		add();
-		add(30, 40);
+		// add();
+		// add(30, 40);
+		roundof((float) 5.6);
+		roundof((float) 7.3);
+		roundof((float) 8.4);
+
+	}
+
+	static void roundof(float d) {
+		int y;
+		y = (int) (d + .5);
+		System.out.println(y);
 
 	}
 
