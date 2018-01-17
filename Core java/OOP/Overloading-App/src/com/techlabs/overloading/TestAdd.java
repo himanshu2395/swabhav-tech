@@ -8,7 +8,14 @@ public class TestAdd {
 		roundof((float) 5.6);
 		roundof((float) 7.3);
 		roundof((float) 8.4);
+		System.out.println("is 10 even?" + iseven(10));
 
+	}
+
+	static boolean iseven(int i) {
+		if (i % 2 == 0) {
+		}
+		return true;
 	}
 
 	static void roundof(float d) {
