@@ -1,32 +1,48 @@
 package com.techlabs.evenpalindrome;
 
+import java.util.Arrays;
+
 public class TestReturn {
 
 	public static void main(String[] args) {
-		int[] EvenNos = getEvenNos(100, 200);
-		for (int i = 100; i < 202; i++) {
-			System.out.println("EvenNos" + i + EvenNos[i]);
-		}
-		// int[] PalindromeNos=getPalindromeNos(100,200);
+
+		// int[] evenNos = getEvenNos(10, 100);
+		// for (int i = 0; i < evenNos.length; i++)
+		// System.out.println(evenNos[i]);
+		int[] palindromeNos = getPalindromeNos(202, 210);
+		for (int i = 0; i < palindromeNos.length; i++)
+			System.out.println(palindromeNos[i]);
 	}
 
-	/*
-	 * static int[] getPalindromeNos(int i, int j) { return null; }
-	 */
-	static int[] getEvenNos(int i, int j) {
-		int[] EvenNos = new int[202];
-		int[] actualEvenNos = new int[EvenNos.length];
-		for (int k = i; k <= j; k++) {
+	static int[] getPalindromeNos(int start, int end) {
+		int[] palindromeNos = new int[end - start + 1];
+		int index = 0;
+		int reverse = 0, remainder, originalInteger;
+
+		originalInteger = start;
+		while (start != 0) {
+			remainder = start % 10;
+			reverse = reverse * 10 + remainder;
+			start = start / 10;
+		}
+
+		if (originalInteger == reverse) {
+			palindromeNos[index] = reverse;
+			index++;
+
+		}
+		return palindromeNos;
+	}
+
+	static int[] getEvenNos(int start, int end) {
+		int[] evenNos = new int[end - start + 1];
+		int index = 0;
+		for (int k = start; k <= end; k++) {
 			if (k % 2 == 0) {
-				EvenNos[k] = k;
+				evenNos[index] = k;
+				index++;
 			}
 		}
-		for (int z = 0; z < EvenNos.length; z++) {
-			if (EvenNos[z] != 0 && EvenNos[z] % 2 == 0) {
-				actualEvenNos[z] = EvenNos[z];
-			}
-		}
-		// System.out.println(actualEvenNos[0]);
-		return actualEvenNos;
+		return evenNos;
 	}
 }
