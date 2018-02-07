@@ -18,7 +18,6 @@ public class TestMangeShift {
 		for (int j = 0; j < nos.length - 1; j++) {
 			nos[j] = nos[j + 1];
 		}
-		
 		nos[nos.length - 1] = temp1;
 	}
 	}
