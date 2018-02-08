@@ -25,7 +25,6 @@ public class RectangleTest {
 			System.out.println("Height = " + rectangles[i].getHeight());
 			System.out.println("Border = " + rectangles[i].getBorder());
 			System.out.println("Area of a Rectangle = " + rectangles[i].calcaulateArea());
-			System.out.println(rectangles[i]);
 
 		}
 
