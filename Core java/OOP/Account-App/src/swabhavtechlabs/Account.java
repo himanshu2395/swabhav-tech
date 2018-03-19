@@ -4,7 +4,9 @@ public class Account {
 	private int accountno;
 	private String name;
 	private double balance;
+	private static int count = 0;
 	private static int nextaccount = 1001;
+	private int withdraw;
 
 	public Account(String name, double balance) {
 		this.name = name;
@@ -30,20 +32,25 @@ public class Account {
 
 	public double getBalance() {
 		return balance;
+
 	}
 
-	public void deposit(int amount) {
-		balance += amount;
+	public double deposit(int amount) {
+		return balance += amount;
+
 	}
 
-	public void Withdral(int amount) {
-		double temp = balance - amount;
-		if (temp > 0) {
+	public int Withdraw(int amount) {
+		double remainingBalance = balance - amount;
+		if (remainingBalance > 0) {
+			count++;
 			balance = balance - amount;
-			// System.out.println(balance);
-		} else {
-			System.out.println("Minimum fund reached");
 		}
+		return count;
 
+	}
+
+	public int getCountWithdrawl() {
+		return count;
 	}
 }

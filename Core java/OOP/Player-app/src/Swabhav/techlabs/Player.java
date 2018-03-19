@@ -10,18 +10,37 @@ public class Player {
 		this.id = id;
 		this.name = name;
 		this.age = age;
-		count++;
+		// count++;
 	}
 
 	public Player(int id, String name) {
 		this.id = id;
 		this.name = name;
 		age = 18;
-		count++; 
+		count++;
 	}
-	public int  getCount() {
+
+	public int getCount() {
 		return count;
-		
+
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		Player that = (Player) obj;
+		if (this.id != that.id) {
+			return false;
+		}
+		if (this.name != that.name) {
+			return false;
+		}
+
+		if (this.age == that.age) {
+			return true;
+		}
+		return false;
+
 	}
 
 	public int getId() {

@@ -10,38 +10,29 @@ public class TestAdd {
 		// roundof((float) 8.4);
 		// System.out.println("is 10 even?" + iseven(10));
 		// System.out.println("is 115 even?" + iseven(115));
-		 printEven(100, 210);
-		//printEven(100);
-		 System.out.println(isPalindrome(202));
+		printEven(100, 210);
+		// printEven(100);
+		System.out.println(isPalindrome(202));
 
 	}
-	
-
 
 	private static boolean isPalindrome(int number) {
-		 int reverse = 0, remainder, originalInteger;
+		int reverse = 0, remainder, originalInteger;
 
-	        originalInteger = number;
+		originalInteger = number;
 
-	       
-	        while( number != 0 )
-	        {
-	            remainder = number % 10;
-	            reverse = reverse * 10 + remainder;
-	            number  /= 10;
-	        }
+		while (number != 0) {
+			remainder = number % 10;
+			reverse = reverse * 10 + remainder;
+			number /= 10;
+		}
 
-	        if (originalInteger == reverse) {
-	        return true;
-	        }else {
-	        return false;
-	    }
+		if (originalInteger == reverse) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-	
-		
-	
-
-
 
 	static void printEven(int start, int end) {
 		int count = 0;
@@ -51,8 +42,8 @@ public class TestAdd {
 			if (start % 2 == 0) {
 				count++;
 				System.out.println(start + " ");
-				if(isPalindrome(start)) {
-					System.out.println("number is palindrome"+start);
+				if (isPalindrome(start)) {
+					System.out.println("number is palindrome" + start);
 				}
 
 			}

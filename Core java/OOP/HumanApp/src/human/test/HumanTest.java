@@ -24,12 +24,11 @@ public class HumanTest {
 		printDetails(new Human());
 		System.out.println(new Human().getHeight());
 		System.out.println(new Human());
-		/*Human abc = null;
-		printDetails(abc);*/
-		
-		
+		/*
+		 * Human abc = null; printDetails(abc);
+		 */
+
 	}
-	
 
 	public static void printDetails(Human human) {
 		System.out.println("Age is=" + human.getAge());
@@ -37,6 +36,5 @@ public class HumanTest {
 		System.out.println("height is=" + human.getHeight());
 		System.out.println("gender is=" + human.getGender());
 	}
-
 
 }

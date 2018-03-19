@@ -1,11 +1,38 @@
 package com.techlabs.human;
 
+import java.util.Objects;
+
 public class Human {
 	public String name;
 	private String gender;
 	private int age;
 	private double weight;
 	private float height;
+
+	public Human(int age, String name) {
+		this.age = age;
+		this.name = name;
+	}
+
+	@Override
+	public boolean equals(Object s1) {
+		if (s1 == this)
+			return true;
+		if (!(s1 instanceof Human)) {
+			return false;
+		}
+		Human s2 = (Human) s1;
+		return age == s2.age && name.equals(s2);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(age, name);
+	}
+
+	public Human() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public void setAge(int parmAge) {
 		if (parmAge > 18 && parmAge < 80) {
@@ -70,7 +97,7 @@ public class Human {
 	}
 
 	public void doWorkout() {
-		
+
 		weight = weight - 0.5;
 	}
 }
