@@ -2,10 +2,10 @@ package com.techlabs.human;
 
 import java.util.Objects;
 
-public class Human {
+public class Human implements Comparable<Human> {
 	public String name;
 	private String gender;
-	private int age;
+	public int age;
 	private double weight;
 	private float height;
 
@@ -99,5 +99,15 @@ public class Human {
 	public void doWorkout() {
 
 		weight = weight - 0.5;
+	}
+
+	@Override
+	public int compareTo(Human o) {
+		if (age == o.age)
+			return 0;
+		else if (age > o.age)
+			return 1;
+		else
+			return -1;
 	}
 }
