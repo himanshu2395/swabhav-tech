@@ -19,7 +19,7 @@ public class Test {
 
 		do {
 			try {
-				System.out.println("1-Start");
+				System.out.println("1-Search RTO");
 				System.out.println("2-Display");
 				System.out.println("3-Exit");
 				System.out.println("Choose option: ");
@@ -30,10 +30,10 @@ public class Test {
 				switch (choice) {
 
 				case 1:
-					FileReader reader = new FileReader("d:/StateCode.properties");
-
-					Properties p = new Properties();
-					p.load(reader);
+					// FileReader reader = new FileReader("d:/StateCode.properties");
+					//
+					// Properties p = new Properties();
+					// p.load(reader);
 					HashMap<String, String> map = new HashMap<String, String>();
 					map.put("AP", "Andhra Pradesh");
 					map.put("AR", "Arunachal Pradesh");
@@ -72,9 +72,10 @@ public class Test {
 					map.put("DL", "Delhi");
 					map.put("LD", "Lakshadweep");
 					map.put("PY", "Pondicherry");
-
+					System.out.println("Enter the state you want");
+					String name = scan.next();
 					for (Map.Entry m : map.entrySet()) {
-						if (((String) m.getKey()).startsWith("A")) {
+						if (((String) m.getKey()).contains(name)) {
 							System.out.println(m.getKey() + " " + m.getValue());
 
 						}
@@ -83,6 +84,7 @@ public class Test {
 					break;
 
 				case 2:
+
 					break;
 				case 3:
 
