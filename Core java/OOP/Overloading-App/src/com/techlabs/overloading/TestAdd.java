@@ -3,15 +3,15 @@ package com.techlabs.overloading;
 public class TestAdd {
 
 	public static void main(String[] args) {
-		// add();
-		// add(30, 40);
-		// roundof((float) 5.6);
-		// roundof((float) 7.3);
-		// roundof((float) 8.4);
-		// System.out.println("is 10 even?" + iseven(10));
-		// System.out.println("is 115 even?" + iseven(115));
+		 add();
+		add(30, 40);
+		 roundof((float) 5.6);
+	            roundof((float) 7.3);
+		 roundof((float) 8.4);
+		 System.out.println("is 10 even?" + iseven(10));
+		 System.out.println("is 115 even?" + iseven(115));
 		printEven(100, 210);
-		// printEven(100);
+		 printEven(100);
 		System.out.println(isPalindrome(202));
 
 	}
