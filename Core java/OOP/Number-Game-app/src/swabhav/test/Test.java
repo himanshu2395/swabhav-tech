@@ -18,13 +18,13 @@ public class Test {
 				int choice = scan.nextInt();
 				Random rand = new Random();
 
-				int rand_int1 = rand.nextInt(100);
+				int rand_int1 = rand.nextInt(50);
 
 				switch (choice) {
 				case 1:
-					for (int i = 1; i < 20; i++) {
+					for (int i = 1; i < 10; i++) {
 						System.out.println("Enter your number : ");
-						int a = scan.nextInt();
+						int a = scan.nextInt(){
 						if (a == rand_int1) {
 							System.out.println(" Match");
 							break;
@@ -37,7 +37,7 @@ public class Test {
 
 						}
 
-						System.out.println("number remaining of attempt : " + (5 - i));
+						System.out.println("number remaining of attempt : " + (10 - i));
 					}
 					System.out.println("Game Over");
 
